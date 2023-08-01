@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        function fibonacci(count) {
+            var array = [];
+            if (count == 2) {
+                array.push(0);
+                array.push(1);
+                console.log(array);
+            }
+
+            if (count == 1) {
+                array.push(0);
+                console.log(array);
+            }
+
+            if (count > 2) {
+                {
+                    array.push(0);
+                    array.push(1);
+                }
+                for (var i = 0; array.length <= count; i++) array[i + 2] = array[i] + array[i + 1];
+                console.log(array);
+
+            }
+        }
+    </script>
+</body>
+
+</html>

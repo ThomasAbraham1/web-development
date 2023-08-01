@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="gameWindow">
+        <div class="title">
+            <h1>Game</h1>
+            <div class="dice1">
+                <img src="images/dice1.png" alt="dice1">
+            </div>
+            <div class="dice2">
+                <img src="images/dice2.png" alt="dice2">
+            </div>
+<h1>Learn CSS AND BOOTSTRAP for styling</h1>
+            <script>
+                function randomDice() {
+                    var dice1 = Math.floor((Math.random() * 6) + 1);
+                    var dice2 = Math.floor((Math.random() * 6) + 1);
+                    var player1 = document.body.querySelector(".dice1 img");
+                    var player2 = document.body.querySelector(".dice2 img");
+                    player1.setAttribute("src", "images/dice" + dice1 + ".png");
+                    player2.setAttribute("src", "images/dice" + dice2 + ".png");
+                }
+                randomDice();
+            </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var current = 99;
+        lyric = current + " " + bottleWord + " of bear on the wall, " + current + " " + bottleWord + " of bear \n Take one down and pass it around, " + (current - 1) + " " + bottleWord + " of bear on the wall";
+        while (current >= 0) {
+            var bottleWord = "bottles";
+            if (current == 1) {
+                bottleWord = "bottle"
+                console.log(current + " " + bottleWord + " of bear on the wall, " + current + " " + bottleWord + " of bear \n Take one down and pass it around, " + (current - 1) + " " + bottleWord + " of bear on the wall");
+            }
+            else if (current == 0) {
+                console.log("No more bottles of beer on the wall, no more bottles of beer. \n Go to the store and buy some more, 99 bottles of beer on the wall");
+            }
+            else {
+                console.log(current + " " + bottleWord + " of bear on the wall, " + current + " " + bottleWord + " of bear \n Take one down and pass it around, " + (current - 1) + " " + bottleWord + " of bear on the wall");
+
+            }
+            current--;
+
+        }
+
+    </script>
+</body>
+
+</html>

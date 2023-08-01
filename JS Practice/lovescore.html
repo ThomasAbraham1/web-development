@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        prompt("What's your name?");
+        prompt("What's the name of your crush");
+        var lovescore = Math.random() * 100
+        lovescore = Math.floor(lovescore) + 1;
+
+        if(lovescore >= 80){
+            alert("You guys are meant for each other");
+        }
+        else if(lovescore >= 65 && lovescore <= 79 ){
+            alert("You guys are possible")
+        }
+        else if(lovescore <= 65 && lovescore >= 45){
+            alert("It seems kind of unlikely")
+        }
+        else{
+            alert("You guys go like oil in water")
+        }
+    </script>
+</body>
+</html>

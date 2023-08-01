@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Dice Game!</h1>
+<div class="img1"><img src="images/dice1.png" alt="image1"></div>
+    <div class="img2"><img src="images/dice2.png" alt="image2"></div>
+    <script>
+      var dice1 = document.querySelector(" .img1 img")
+      dice1.setAttribute("src", "images/dice" + Math.floor((Math.random() * 6) + 1) + ".png");
+      var dice2 = document.querySelector(" .img2 img")
+      dice2.setAttribute("src", "images/dice" + Math.floor((Math.random() * 6) + 1) + ".png");
+
+
+    </script>
+  </div>
+</body>
+</html>
