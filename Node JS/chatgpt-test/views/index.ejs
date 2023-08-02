@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatGPT Test</title>
+</head>
+<body>
+  <h1>ChatGPT Test</h1>
+  <form action="/" method="POST">
+    <label for="prompt">Prompt:</label>
+    <textarea name="prompt" id="prompt" rows="4" cols="50"><%= prompt %></textarea>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  <h2>Generated Text:</h2>
+  <p><%= completion %></p>
+</body>
+</html>
