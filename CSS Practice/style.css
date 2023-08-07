@@ -42,3 +42,19 @@ body {
   strong :first-child{
     color:blue;
   }
+
+  hr{
+    border: 5px solid lightgreen;
+  }
+
+  div.container{
+    display: grid;
+    grid-template-rows: 2fr 2fr;
+    grid-template-columns: 2fr 2fr;
+    border: 10px solid hotpink;
+  }
+
+  div.item{
+    color:black;
+    border: 5px solid orange;
+  }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheet/styles.css">
+</head>
+
+<body>
+
+    <h1>Game</h1>
+    <div class="container">
+        <div class="title">
+            <div class="dice1">
+                <img src="/images/dice1.png" alt="dice1">
+            </div>
+
+            <div class="dice2">
+                <img src="/images/dice2.png" alt="dice2">
+            </div>
+            <div class="resultMsg1">
+            </div>
+
+            <div class="resultMsg2">
+
+            </div>
+            <div class="aiComment1">
+                <%= aiComment1 %>
+            </div>
+            <div class="aiComment2">
+                <%= aiComment2 %>
+
+            </div>
+            <input type="text">
+        </div>
+
+
+        <!-- Use Bootstrap to style the button and center it -->
+        <form action="/" method="POST">
+            <div class="text-center mt-4">
+                <button id="button" type="submit" class="btn btn-primary">Try</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function randomDice() {
+            var dice1 = Math.floor((Math.random() * 6) + 1);
+            var dice2 = Math.floor((Math.random() * 6) + 1);
+            var player1 = document.body.querySelector(".dice1 img");
+            var player2 = document.body.querySelector(".dice2 img");
+            player1.setAttribute("src", "images/dice" + dice1 + ".png");
+            player2.setAttribute("src", "images/dice" + dice2 + ".png");
+            var player1Msg = document.querySelector('.resultMsg1');
+            var player2Msg = document.querySelector('.resultMsg2');
+            document.querySelector('.aiComment1').addEventListener('change',myFunc);
+               
+        }
+        const button = document.getElementById("button");
+        button.addEventListener('click', randomDice);
+
+
+        function myFunc(){
+            if (dice1 > dice2) {
+                    player1Msg.innerHTML = '<h4> You are the winner</h4>';
+                    player2Msg.innerHTML = '<h4> You lost! </h4>';
+                } else {
+                    player1Msg.innerHTML = '<h4> You lost! </h4>';
+                    player2Msg.innerHTML = '<h4> You are the winner</h4>';
+                }
+        }
+    </script>
+</body>
+
+</html>

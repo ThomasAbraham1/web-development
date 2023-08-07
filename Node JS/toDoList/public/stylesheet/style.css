@@ -1,0 +1,11 @@
+
+
+.todoList {
+  display:grid;
+  grid-template-columns: 2fr;
+
+}
+.item{
+    text-align: left;
+    margin: auto;
+}
