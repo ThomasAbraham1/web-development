@@ -1,0 +1,19 @@
+div.title{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin: auto;
+  text-align: center;
+}
+
+.dice1, .dice2{
+  margin: 0 16px;
+
+}
+
+h1{
+  text-align: center;
+}
+
+button{
+  
+}

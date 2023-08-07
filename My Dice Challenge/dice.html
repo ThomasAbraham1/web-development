@@ -4,30 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="gameWindow">
-        <div class="title">
-            <h1>Game</h1>
-            <div class="dice1">
-                <img src="images/dice1.png" alt="dice1">
-            </div>
-            <div class="dice2">
-                <img src="images/dice2.png" alt="dice2">
-            </div>
-<h1>Learn CSS AND BOOTSTRAP for styling</h1>
-            <script>
-                function randomDice() {
-                    var dice1 = Math.floor((Math.random() * 6) + 1);
-                    var dice2 = Math.floor((Math.random() * 6) + 1);
-                    var player1 = document.body.querySelector(".dice1 img");
-                    var player2 = document.body.querySelector(".dice2 img");
-                    player1.setAttribute("src", "images/dice" + dice1 + ".png");
-                    player2.setAttribute("src", "images/dice" + dice2 + ".png");
-                }
-                randomDice();
-            </script>
+
+    <h1>Game</h1>
+    <div class="container">
+    <div class="title">
+        <div class="dice1">
+            <img src="images/dice1.png" alt="dice1">
+        </div>
+        
+        <div class="dice2">
+            <img src="images/dice2.png" alt="dice2">
+        </div>
+        <div class="resultMsg2">
+            <h4>You're the winner cunt</h4>
+        </div>
+        <div class="resultMsg1">
+            <h4>You lose nigga</h4>
+        </div>
+       
+    </div>
+</div>
+
+
+    <script>
+        function randomDice() {
+            var dice1 = Math.floor((Math.random() * 6) + 1);
+            var dice2 = Math.floor((Math.random() * 6) + 1);
+            var player1 = document.body.querySelector(".dice1 img");
+            var player2 = document.body.querySelector(".dice2 img");
+            player1.setAttribute("src", "images/dice" + dice1 + ".png");
+            player2.setAttribute("src", "images/dice" + dice2 + ".png");
+        }
+        randomDice();
+    </script>
 </body>
 
 </html>
