@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/stylesheet/style.css">
+    <link rel="stylesheet" href="/stylesheet/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+<style>
+    .strike {
+        text-decoration: line-through;
+    }
+</style>
 
 <body>
     <header>
@@ -16,7 +21,7 @@
     <div class="title">
         Sunday
     </div>
-    <div class="toDoList">
+    <div class="box">
         <!-- <div class="item"> Item 2</div>
         <div class="item"> Item 2</div>
         <div class="item"> Item 3</div>
@@ -24,29 +29,44 @@
         <div class="item"> Item 5</div>
         <div class="item"> Item 6</div>
         <div class="item"> Item 7</div> -->
-        <% if (typeof todoArray != undefined) { %>
+        <% if (typeof todoArray !=undefined) { %>
 
-        <%  let i=0; while (i < todoArray.length)
-            { %>
-            <div class="item">
-                <input type="checkbox">
-                <p>
-                    <%= todoArray[i] %>
-                </p>
-            </div>
-
-            <% i++; } %>
-            <% } %>
-                <div class="newItem">
-                    <form action="/" method="POST">
-                        <label for="newItem">Add an Item:  </label><input type="text" name="newItem">
-                        <button type="submit">+</button>
+            <% let i=0; while (i < todoArray.length) { %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p>
+                        <%= todoArray[i] %>
+                    </p>
                 </div>
-                </form>
+
+                <% i++; } %>
+                    <% } %>
+                        <div class="newItem">
+                            <form action="/" method="POST">
+                                <input type="text" name="newItem" placeholder="Add a new item">
+                                <button type="submit">+</button>
+                        </div>
+                        </form>
     </div>
     <footer>
 
     </footer>
 </body>
+<script>
+    var itemCheckboxs = document.querySelectorAll('.item input');
+    var itemTexts = document.querySelectorAll('.item p');
+    for (let i = 0; i < <%= todoArray.length %>; i++) {
+        itemCheckboxs[i].addEventListener('click', function (event) {
+            var checkboxVal = event.target.checked;
+            if (checkboxVal) {
+                itemTexts[i].classList.add('strike');
+            } else {
+                itemTexts[i].classList.remove('strike');
+
+            }
+        })
+
+    }
+</script>
 
 </html>
