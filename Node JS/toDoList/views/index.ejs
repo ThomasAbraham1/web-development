@@ -18,17 +18,10 @@
     <header>
         <nav></nav>
     </header>
-    <div class="title">
-        Sunday
+    <div id="heading" class="title">
+        <h1><%= listTitle %></h1>
     </div>
     <div class="box">
-        <!-- <div class="item"> Item 2</div>
-        <div class="item"> Item 2</div>
-        <div class="item"> Item 3</div>
-        <div class="item"> Item 4</div>
-        <div class="item"> Item 5</div>
-        <div class="item"> Item 6</div>
-        <div class="item"> Item 7</div> -->
         <% if (typeof todoArray !=undefined) { %>
 
             <% let i=0; while (i < todoArray.length) { %>
@@ -44,7 +37,7 @@
                         <div class="newItem">
                             <form action="/" method="POST">
                                 <input type="text" name="newItem" placeholder="Add a new item">
-                                <button type="submit">+</button>
+                                <button type="submit" name="listTitle" value="<%= listTitle %>">+</button>
                         </div>
                         </form>
     </div>
